@@ -2,46 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rps game</title>
+    <title>RPS Crypto Arena</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Rock Paper Scissors</h1>
-        <button id="connectBtn" style="margin-top: 10px; padding: 5px 10px; cursor: pointer;">Connect Wallet</button>
-    </header>
-<div style="margin-top: 10px;">
-    <p>House Balance: <span id="houseBalance">0.0000</span> tBNB</p>
-    <input type="number" id="depositAmount" placeholder="0.01" step="0.001" style="width: 60px;">
-    <button id="depositBtn">Deposit to Bankroll</button>
-</div>
-    <div class="score-board">
-        <div id="user-label" class="badge">user</div>
-        <div id="computer-label" class="badge">computer</div>
-        <span id="user-score">0</span>:<span id="computer-score">0</span>
-    </div>
+    <div class="container" style="max-width: 900px;">
+        <header>
+            <h1>RPS Crypto Arena</h1>
+            <p style="color: #aaaaaa;">Choose your battle mode</p>
+        </header>
 
-    <div class="result">
-        <p>Connect wallet to play!</p>
-    </div>
+        <div class="mode-selection">
+            <div class="mode-card" onclick="window.location.href='singleplayer.html'">
+                <div class="icon">🤖</div>
+                <h2>Vs Computer</h2>
+                <p>Instant results. Play against the smart contract bot.</p>
+                <button class="btn-main">Play Solo</button>
+            </div>
 
-    <div class="choices">
-        <div class="choice" id="r">
-            <img src="images/rock.png" alt="Rock" width="40px">
-        </div>
-        <div class="choice" id="p">
-            <img src="images/paper.png" alt="Paper" width="40px">
-        </div>
-        <div class="choice" id="s">
-            <img src="images/scissor.png" alt="Scissors" width="40px">
+            <div class="mode-card" onclick="window.location.href='multiplayer.html'">
+                <div class="icon">⚔️</div>
+                <h2>Multiplayer</h2>
+                <p>Create a lobby or join a friend via Game ID.</p>
+                <button class="btn-main">PvP Mode</button>
+            </div>
         </div>
     </div>
-
-    <p id="action-msg">Make your move.</p>
-    
-    <script src="app.js" charset="utf-8"></script>
 </body>
 </html>
